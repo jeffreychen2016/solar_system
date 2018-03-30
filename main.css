@@ -9,6 +9,8 @@ html,
 body{
     width: 100%;
     height: 100%;
+    color: whitesmoke;
+
 }
 /*--------------- Cards ---------------*/
 #input-search{
@@ -20,6 +22,7 @@ body{
 
 #main-wrapper{
     border: 2px solid black;
+    background-image: url('imgs/background.jpg');
 }
 
 #solar-system{
@@ -37,14 +40,7 @@ body{
     height: 400px;
     font-size: 4em;
     position: relative;
-}
-
-.planet:hover .planet-img{
-    opacity: 1;
-}
-
-.planet:hover .planet-name{
-    opacity:0;
+    overflow: hidden;
 }
 
 .planet-name{
@@ -54,7 +50,7 @@ body{
     top: 50%;
     margin-top: -37px;
     left:0;
-    transition: opacity 1s;
+    transition: transform 1s ease-out;
 }
 
 .planet-img{
@@ -64,7 +60,18 @@ body{
     position: absolute;
     top: 0;
     left:0;
-    transition: opacity 1s;
+    transition: transform 1s ease-out;
+    transform: translateY(-100%);
+}
+
+.planet:hover .planet-img{
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+.planet:hover .planet-name{
+    opacity:0;
+    transform: translateY(100%);
 }
 
 
