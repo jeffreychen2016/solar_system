@@ -1,0 +1,68 @@
+{
+    "planets":[
+        {
+            "name":"Mercury",
+            "imageUrl":"https://solarsystem.nasa.gov/system/resources/detail_files/439_MercurySubtleColors1200w.jpg",
+            "description": "",
+            "isGasPlanet":"",
+            "numberOfMoons":"#",
+            "nameOfLargestMoon":""           
+        },
+        {
+            "name":"Venus",
+            "imageUrl":"https://solarsystem.nasa.gov/system/resources/detail_files/688_Venus.jpg",
+            "description": "",
+            "isGasPlanet":"",
+            "numberOfMoons":"#",
+            "nameOfLargestMoon":""           
+        },
+        {
+            "name":"Earth",
+            "imageUrl":"https://solarsystem.nasa.gov/system/resources/detail_files/581_PIA18033_1200w.jpg",
+            "description": "",
+            "isGasPlanet":"",
+            "numberOfMoons":"#",
+            "nameOfLargestMoon":""           
+        },
+        {
+            "name":"Mars",
+            "imageUrl":"https://solarsystem.nasa.gov/system/resources/detail_files/683_6453_mars-globe-valles-marineris-enhanced-full2.jpg",
+            "description": "",
+            "isGasPlanet":"",
+            "numberOfMoons":"#",
+            "nameOfLargestMoon":""           
+        },
+        {
+            "name":"Jupiter",
+            "imageUrl":"https://solarsystem.nasa.gov/system/resources/detail_files/113_PIA02873.jpg",
+            "description": "",
+            "isGasPlanet":"",
+            "numberOfMoons":"#",
+            "nameOfLargestMoon":""             
+        },
+        {
+            "name":"Saturn",
+            "imageUrl":"https://solarsystem.nasa.gov/system/resources/detail_files/663_PIA01364.jpg",
+            "description": "",
+            "isGasPlanet":"",
+            "numberOfMoons":"#",
+            "nameOfLargestMoon":""           
+        },
+        {
+            "name":"Uranus",
+            "imageUrl":"https://solarsystem.nasa.gov/system/resources/detail_files/599_PIA18182.jpg",
+            "description": "",
+            "isGasPlanet":"",
+            "numberOfMoons":"#",
+            "nameOfLargestMoon":""          
+        },
+        {
+            "name":"Neptune",
+            "imageUrl":"https://solarsystem.nasa.gov/system/resources/detail_files/611_PIA01492.jpg",
+            "description": "",
+            "isGasPlanet":"",
+            "numberOfMoons":"#",
+            "nameOfLargestMoon":""         
+        }
+    ]
+}
