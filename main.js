@@ -7,35 +7,38 @@ const createPlanetCards = (data) => {
     string = '';
     for(let i = 0; i < data.length; i++){
         string += `<div class="planet">`;
-        string +=   `<div>${data[i].name}</div>`;
-        string +=   `<img class='img-planet' src='${data[i].imageUrl}'>`;
+        string +=   `<div class='planet-name'>${data[i].name}</div>`;
+        string +=   `<img class='planet-img' src='${data[i].imageUrl}'>`;
         string += `</div>`;
     }
     printToDom(string,'solar-system');
 }   
 
-const displayImgOnMouseHover = (e) => {
-    e.target.parentNode.children[1].style.display = 'block';
-}
+// const displayImgOnMouseHover = (e) => {
+//     //add this condition to prevent border interference
+//     if(e.target.classList[0] !== 'planet'){
+//         e.target.parentNode.children[1].style.display = 'block';
+//     }
+// }
 
-const hideImgOnMouseOut = (e) => {
-    e.target.parentNode.children[1].style.display = 'none';
-}
+// const hideImgOnMouseOut = (e) => {
+//     e.target.parentNode.children[1].style.display = 'none';
+// }
 
-const addEventListeners = () => {
-    const planets = document.getElementsByClassName('planet');
-    for(let i = 0; i < planets.length; i++){
-        planets[i].addEventListener('mouseover',displayImgOnMouseHover);
-        planets[i].addEventListener('mouseout',hideImgOnMouseOut);
-    }
-}
+// const addEventListeners = () => {
+//     const planets = document.getElementsByClassName('planet');
+//     for(let i = 0; i < planets.length; i++){
+//         planets[i].addEventListener('mouseover',displayImgOnMouseHover);
+//         planets[i].addEventListener('mouseout',hideImgOnMouseOut);
+//     }
+// }
 
 
 
 function executeThisCodeAfterFileLoaded(){
     const data = JSON.parse(this.responseText);
     createPlanetCards(data.planets);
-    addEventListeners();
+    // addEventListeners();
 }
 
 function executeThisCodeIfXHRFails(){
