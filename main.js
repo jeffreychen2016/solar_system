@@ -14,31 +14,48 @@ const createPlanetCards = (data) => {
     printToDom(string,'solar-system');
 }   
 
-// const displayImgOnMouseHover = (e) => {
-//     //add this condition to prevent border interference
-//     if(e.target.classList[0] !== 'planet'){
-//         e.target.parentNode.children[1].style.display = 'block';
-//     }
-// }
+const addEventListeners = () => {
+    const planet_imgs = document.getElementsByClassName('planet-img');
+    for(let i = 0; i < planet_imgs.length; i++){
+        planet_imgs[i].addEventListener('click',zoomInImg);
+    }
+}
 
-// const hideImgOnMouseOut = (e) => {
-//     e.target.parentNode.children[1].style.display = 'none';
-// }
+const hideOtherCards = (e) => {
+    const elementsToHide = document.getElementsByClassName('planet');
+    for(let i = 0; i < elementsToHide.length; i++){
+        //hide elements that are not the one being clicked on
+        if(e.target != elementsToHide[i].children[1]){
+            elementsToHide[i].style.visibility = 'hidden';
+        }
+    }
+}
 
-// const addEventListeners = () => {
-//     const planets = document.getElementsByClassName('planet');
-//     for(let i = 0; i < planets.length; i++){
-//         planets[i].addEventListener('mouseover',displayImgOnMouseHover);
-//         planets[i].addEventListener('mouseout',hideImgOnMouseOut);
-//     }
-// }
+const assignID = (e) => {
+    e.target.parentNode.setAttribute('id','display-details');
+}
+
+const displayDetails = (e) => {
+    assignID(e);
+    let string = '';
+    string += `<h2>Title</h2>`;
+    string += `<img src>`;
+    string += '<p>lorem jflsdjflajkdsfjalkdj</p>';
+    printToDom(string,'display-details');
+}
+
+const zoomInImg = (e) => {
+    hideOtherCards(e);
+    displayDetails(e);
+}
+
 
 
 
 function executeThisCodeAfterFileLoaded(){
     const data = JSON.parse(this.responseText);
     createPlanetCards(data.planets);
-    // addEventListeners();
+    addEventListeners();
 }
 
 function executeThisCodeIfXHRFails(){

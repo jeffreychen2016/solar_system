@@ -65,7 +65,7 @@ body{
 }
 
 .planet:hover .planet-img{
-    opacity: 1;
+    opacity: 0.5;
     transform: translateY(0%);
 }
 
@@ -73,6 +73,8 @@ body{
     opacity:0;
     transform: translateY(100%);
 }
+
+
 
 
 
