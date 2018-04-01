@@ -13,7 +13,7 @@ body{
 
 }
 /*--------------- Cards ---------------*/
-#input-search{
+.input-search{
     display: block;
     width: 35%;
     height: 30px;
@@ -23,6 +23,7 @@ body{
 #main-wrapper{
     border: 2px solid black;
     background-image: url('imgs/background.jpg');
+    min-height: 100vh;
 }
 
 #solar-system{
