@@ -7,10 +7,9 @@ const getData = (executeOnSuccess) => {
 }
 
 function executeThisCodeAfterFileLoaded(){
-    // console.log(this);
     const data = JSON.parse(this.responseText);
     createPlanetCards(data.planets);
-    addEventListeners('planet-img',zoomInImg);
+    addEventListeners('planet-img','click',zoomInImg);
 }
 
 function executeThisCodeIfXHRFails(){
@@ -32,10 +31,10 @@ const createPlanetCards = (data) => {
     printToDom(string,'solar-system');
 }   
 
-const addEventListeners = (className,callBackfunction) => {
+const addEventListeners = (className,event,callBackfunction) => {
     const allElements = document.getElementsByClassName(className);
     for(let i = 0; i < allElements.length; i++){
-        allElements[i].addEventListener('click',callBackfunction);
+        allElements[i].addEventListener(event,callBackfunction);
     }
 }
 
@@ -76,7 +75,7 @@ function displayDetails(e){
                     planets[n].innerHTML = string;
                 }
             }
-            addEventListeners('cancel-btn',backToOriginal);
+            addEventListeners('cancel-btn','click',backToOriginal);
         }
     };
     xhttp.open("GET","./planets.json", true);
@@ -102,8 +101,29 @@ const backToOriginal = (e) => {
     showOtherCards(e);
 }
 
+const getUserInput = () => {
+    let userInput = document.getElementsByClassName('input-search')[0].value;
+    return userInput;
+}
+
+const searchInput = () => {
+    let userInput = getUserInput();
+    const allElementsString = document.getElementsByClassName('planet');
+    for(let i = 0; i < allElementsString.length; i++){
+        if(userInput.toLowerCase() === allElementsString[i].children[0].innerHTML.toLowerCase()){
+            for(let n = 0; n < allElementsString.length; n++){
+                allElementsString[n].style.display = 'none';
+            }
+        allElementsString[i].style.display = 'block';
+        }else if(userInput.toLowerCase() == ''){
+            allElementsString[i].style.display = 'block';
+        }
+    }
+}
+
 const runApplication = () => {
-    getData(executeThisCodeAfterFileLoaded);    
+    getData(executeThisCodeAfterFileLoaded); 
+    addEventListeners('input-search','keyup',searchInput);   
 }
 
 runApplication();
