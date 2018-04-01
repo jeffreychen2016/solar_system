@@ -65,13 +65,46 @@ body{
 }
 
 .planet:hover .planet-img{
-    opacity: 1;
+    opacity: 0.5;
     transform: translateY(0%);
 }
 
 .planet:hover .planet-name{
     opacity:0;
     transform: translateY(100%);
+}
+
+/*--------------- Large Card ---------------*/
+.enlarge-card{
+    width: 80%;
+    height: 100vh;
+    position: relative;
+}
+
+.cancel-btn{
+    position: absolute;
+    font-size: 0.5em;
+    color: white;
+    top: 10px;
+    right: 10px;
+    display: block;
+    height: 50px;
+    width: 50px;
+    border: 2px solid black;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.detail-img{
+    display: block;
+    width: 60%;
+    height: 60%;
+    margin: 0 auto;
+    opacity: 0.5;
+}
+
+.detail-p{
+    font-size: 0.5em;
 }
 
 
