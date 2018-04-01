@@ -74,6 +74,26 @@ body{
     transform: translateY(100%);
 }
 
+/*--------------- Large Card ---------------*/
+.enlarge-card{
+    width: 80%;
+    height: 100vh;
+    position: relative;
+}
+
+.cancel-btn{
+    position: absolute;
+    font-size: 0.5em;
+    color: white;
+    top: 10px;
+    right: 10px;
+    display: block;
+    height: 50px;
+    width: 50px;
+    border: 2px solid black;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
 
 
 
